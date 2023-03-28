@@ -9,32 +9,38 @@
   <title>Home</title>
 </head>
 <body class="font-Nunito">
-    <div class="bg-[#C8222C] flex justify-between p-4 px-20">
-      <div class="font-Playfair flex items-center gap-2 text-white">
+    <div class="bg-[#C8222C] flex flex-col sm:flex-row justify-between p-2 sm:p-4">
+      <div class="font-Playfair sm:flex items-center gap-2 text-white">
         Connect with us:
-        <div class="flex gap-1">
+        <div class="hidden sm:block gap-1">
           <i class="fa-brands fa-facebook"></i>
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-twitter"></i>
         </div>
       </div>
-      <div id="contact" class="text-white flex gap-2">
-        <div>
+      <div id="contact" class="text-white sm:flex gap-2">
+        <div class="flex items-center">
           <i class="fa-solid fa-phone"></i>
-          3453563
+          <span class="ml-2">3453563</span>
         </div>
-        <div class="h-6 bg-slate-300 w-[2px]"></div>
-        <div>
+        <div class="h-6 bg-slate-300 sm:w-[2px]"></div>
+        <div class="flex items-center">
           <i class="fa-sharp fa-solid fa-envelope"></i>
-          Nepstate@gmail.com
+          <span class="ml-2">Nepstate@gmail.com</span>
         </div>
       </div>
     </div>
-    <nav class="flex items-center justify-between px-20">
+
+    <nav class="flex flex-row sm:flex-row items-center justify-between px-4 sm:px-20">
       <div class="logo">
-        <img src="./photosrc/Frame 55.png" class="h-20">
+        <img src="./photosrc/Frame 55.png" class="h-10 sm:h-20">
       </div>
-      <ul  class="flex gap-10 font-semibold">
+      <div class="flex items-center justify-end sm:hidden">
+        <button id="menu-button" class="">
+          <img src="./photosrc/bars.png" class="h-4">
+        </button>
+      </div>
+      <ul id="menu-list" class="hidden sm:flex flex-col sm:flex-row gap-4 sm:gap-10 font-semibold text-sm sm:text-base">
         <a href="#3" class="on-hover border-b-2 border-[#C8222C]">Home</a>
         <a href="#3" class="on-hover">About</a>
         <a href="#3" class="on-hover">Agent</a>
@@ -43,67 +49,63 @@
         <a href="#3" class="on-hover">Blog</a>
         <a href="#3" class="on-hover">Contacts</a>
       </ul>
-      <div class="hidden">
-        <img src="./photosrc/bars.png" class="h-10">
-      </div>
     </nav>
 
-    <main class="flex items-center justify-between px-20 py-6">
+    <main class="md:flex items-center justify-between px-8 md:px-20 py-6">
       <div id="banner-content" class="max-w-xl">
-        <h2 class="font-Playfair text-[48px] font-extrabold leading-[60px]">
+        <h2 class="font-Playfair text-2xl md:text-4xl font-extrabold leading-10 md:leading-[60px]">
           Find the <span class="text-[#C8222C]">perfect property</span> you want
         </h2>
-        <div class="text-[18px] text-[#1E1E1E] my-5">
+        <div class="text-base md:text-lg text-[#1E1E1E] my-5">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit esse reprehenderit animi iusto sint repellat nisi totam itaque quasi.
         </div>
-        <div class="flex items-center justify-between border-2 border-[#575353] rounded-full ">
-          <input type="text" placeholder="Search your favourite properties" class="w-[300px] px-4 bg-transparent">
-          <div class="bg-[#C8222C] p-4 px-10 rounded-r-full rounded-bl-full cursor-pointer">
-            <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+        <div class="flex items-center justify-between border-2 border-[#575353] rounded-full">
+          <input type="text" placeholder="Search your favourite properties" class="w-[200px] md:w-[300px] px-4 bg-transparent">
+          <div class="bg-[#C8222C] p-2 md:p-4 px-6 md:px-10 rounded-r-full rounded-bl-full cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass text-white text-xl md:text-2xl"></i>
           </div>
         </div>
       </div>
 
-      <div id="banner-img" class="flex items-center w-fit">
-        <div class="border-[20px] border-[#c8222c] h-[500px] w-[320px]">
-        </div>
-        <div class="ml-[-300px]">
-          <img src="./photosrc/banner-house.png">
+      <div id="banner-img" class="flex items-center w-full md:w-fit">
+        <div class="border-4 md:border-[20px] border-[#c8222c] h-[200px] md:h-[500px] w-[120px] md:w-[320px]"></div>
+        <div class="ml-[-80px] md:ml-[-300px]">
+          <img src="./photosrc/banner-house.png" alt="banner-house">
         </div>
       </div>
     </main>
 
-    <section id="work-seciton" class="flex flex-col items-center m-20">
+    <section id="work-section" class="flex flex-col items-center m-20">
       <div class="flex items-center gap-2">
         <div class="h-[3px] bg-red-500 w-20"></div>
-        <span class="font-Playfair font-extrabold text-[29px] text-[#c8222c]">How it works</span>
+        <span class="font-Playfair font-extrabold text-lg sm:text-2xl md:text-3xl lg:text-4xl text-[#c8222c]">How it works</span>
         <div class="h-[3px] bg-red-500 w-20"></div>
       </div>
-      <div class="font-Playfair text-[30px] font-bold">
+      <div class="font-Playfair text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
         The smartest way to buy a home
       </div>
-      <div id="work-card-wrapper" class="grid grid-cols-3 mt-10 gap-10 px-5 place-items-center">
-        <div id="work-card" class="flex flex-col gap-2 justify-center items-center  w-fit">
+      <div id="work-card-wrapper" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-10 gap-10 px-5 place-items-center">
+        <div id="work-card" class="flex flex-col gap-2 justify-center items-center w-full">
           <img src="./photosrc/find.png" class="h-14 w-14">
-          <h5 class="font-Playfair text-[20px] font-bold">
+          <h5 class="font-Playfair text-md sm:text-lg md:text-xl lg:text-2xl font-bold">
             Find Property
           </h5>
           <div class="text-[#52525B] text-center max-w-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, odit!
           </div>
         </div>
-        <div id="work-card" class="flex flex-col gap-2 justify-center items-center  w-fit">
+        <div id="work-card" class="flex flex-col gap-2 justify-center items-center w-full">
           <img src="./photosrc/buy.png" class="h-14 w-14">
-          <h5 class="font-Playfair text-[20px] font-bold">
+          <h5 class="font-Playfair text-md sm:text-lg md:text-xl lg:text-2xl font-bold">
             Buy Property
           </h5>
           <div class="text-[#52525B] text-center max-w-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, odit!
           </div>
         </div>
-        <div id="work-card" class="flex flex-col gap-2 justify-center items-center  w-fit">
+        <div id="work-card" class="flex flex-col gap-2 justify-center items-center w-full">
           <img src="./photosrc/invest.png" class="h-14 w-14">
-          <h5 class="font-Playfair text-[20px] font-bold">
+          <h5 class="font-Playfair text-md sm:text-lg md:text-xl lg:text-2xl font-bold">
             Make investment
           </h5>
           <div class="text-[#52525B] text-center max-w-sm">
@@ -113,48 +115,48 @@
       </div>
     </section>
 
-    <section class="flex justify-around px-20">
-      <div>
-        <img src="./photosrc/best-sec.png" class="h-[700px]">
+    <section class="flex flex-col md:flex-row justify-around px-4 md:px-20">
+      <div class="w-full md:w-auto">
+        <img src="./photosrc/best-sec.png" class="h-[350px] md:h-[700px] w-full md:w-auto">
       </div>
-      <div class="w-[50%]">
-        <h3 class="text-[#c8222c] text-[40px] font-Playfair font-extrabold tracking-wider max-w-[80%]">
-          We Are The Best Realstate Company
+      <div class="w-full md:w-[50%]">
+        <h3 class="text-[#c8222c] text-3xl md:text-5xl font-Playfair font-extrabold tracking-wider max-w-[80%]">
+          We Are The Best Real Estate Company
         </h3>
-        <div class="text-[#52525B] text-[18px] my-3">
+        <div class="text-[#52525B] text-base md:text-lg my-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam ullam blanditiis nihil inventore dolorem aut esse a odit deleniti dolorum.
         </div>
-        <div class="text-[#52525B] text-[18px] text-justify">
+        <div class="text-[#52525B] text-base md:text-lg text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquam possimus sint eaque culpa maiores numquam voluptates! Neque, officia blanditiis Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, distinctio Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus!
         </div>
         <div class="my-2">
           <div class="flex items-center gap-4 my-4">
             <img src="./photosrc/tick.png" class="h-6">
-            <span class="text-[#52525B] text-[16px]">
+            <span class="text-[#52525B] text-base md:text-lg">
               Lorem ipsum dolor sit amet.
             </span>
           </div>
           <div class="flex items-center gap-4 my-4">
             <img src="./photosrc/tick.png" class="h-6">
-            <span class="text-[#52525B] text-[16px]">
+            <span class="text-[#52525B] text-base md:text-lg">
               Lorem ipsum dolor sit amet.
             </span>
           </div>
           <div class="flex items-center gap-4 my-4">
             <img src="./photosrc/tick.png" class="h-6">
-            <span class="text-[#52525B] text-[16px]">
+            <span class="text-[#52525B] text-base md:text-lg">
               Lorem ipsum dolor sit amet.
             </span>
           </div>
           <div class="flex items-center gap-4 my-4">
             <img src="./photosrc/tick.png" class="h-6">
-            <span class="text-[#52525B] text-[16px]">
+            <span class="text-[#52525B] text-base md:text-lg">
               Lorem ipsum dolor sit amet.
             </span>
           </div>
           <div class="flex items-center gap-4 my-4">
             <img src="./photosrc/tick.png" class="h-6">
-            <span class="text-[#52525B] text-[16px]">
+            <span class="text-[#52525B] text-base md:text-lg">
               Lorem ipsum dolor sit amet.
             </span>
           </div>
@@ -163,78 +165,80 @@
       </div>
     </section>
 
-    <section class="m-20 flex flex-col items-center">
-      <h3 class="font-Playfair font-extrabold text-[29px] text-[#c8222c]">
+    <section class="m-5 md:m-20 flex flex-col items-center">
+      <h3 class="font-Playfair font-extrabold text-3xl md:text-4xl text-[#c8222c]">
         Services
       </h3>
-      <div class="text-[18px]">Lorem ipsum dolor sit amet Lorem, ipsum.</div>
-      <div id="service-card-container" class="grid grid-cols-3 gap-10 mt-10">
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/find.png"></div>
+      <div class="text-lg md:text-xl my-5 md:my-10 text-center md:text-left">
+        Lorem ipsum dolor sit amet Lorem, ipsum.
+      </div>
+      <div id="service-card-container" class="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10">
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/find.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Search property</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Search property</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c] hover:font-bold transition-all ease-in-out">Learn More</a>
           </div>
         </div>
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/buy.png"></div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/buy.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Buy property</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Buy property</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c]">Learn More</a>
           </div>
         </div>
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/invest.png"></div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/invest.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Invest a home</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Invest a home</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c]">Learn More</a>
           </div>
         </div>
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/post.png"></div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/post.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Post property</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Invest a home</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c]">Learn More</a>
           </div>
         </div>
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/locator.png"></div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/locator.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Property locator</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Invest a home</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c]">Learn More</a>
           </div>
         </div>
-        <div id="ser-card" class="flex gap-2">
-          <div class="h-[90px] w-[90px]"><img src="./photosrc/sell-ap.png"></div>
+        <div class="flex flex-col md:flex-row gap-2">
+          <div class="h-12 w-24 md:h-28 md:w-28"><img src="./photosrc/sell-ap.png"></div>
           <div>
-            <h3 class="font-Playfair text-[20px] font-bold">Sell apartments</h3>
-            <div class="text-[16px] my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
+            <h3 class="font-Playfair text-lg md:text-xl font-bold">Invest a home</h3>
+            <div class="text-base md:text-lg my-1 text-[#52525B]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolore!
             </div>
             <a href="#" class="text-[#c8222c]">Learn More</a>
           </div>
         </div>
-      </div>
     </section>
 
-    <section class="flex px-20 relative">
+    <section class="relative px-4 mt-10 md:px-20">
       <div>
-        <img src="./photosrc/realstate-solution-bg.png" class="h-[754px]">
+        <img src="./photosrc/realstate-solution-bg.png" class="h-[754px] w-full object-cover">
       </div>
-      <div class="w-[50%] bg-white absolute p-10 shadow-2xl top-[230px] left-[600px]" >
-        <h1 class="font-Playfair text-4xl text-[#c8222c] font-bold">
+      <div class="absolute bg-white p-4 md:p-10 shadow-2xl top-1/3 md:top-[230px] left-0 md:left-[600px] md:w-[50%]">
+        <h1 class="font-Playfair text-3xl md:text-4xl text-[#c8222c] font-bold">
           Nepalgunj Realstate solution -Buy, Rent and sale  (House - Land - Poperties )
         </h1>
-        <div class="text-[18px text-[#575353] my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, consectetur aspernatur. Dolorem suscipit minus, eos explicabo sapiente ipsam saepe illum ipsum repellendus totam error neque distinctio, itaque asperiores sit architecto nulla, iusto iste? Voluptatem excepturi voluptate harum repudiandae amet necessitatibus sunt, ex ad saepe dolor, molestiae sint nihil officia odio.
+        <div class="text-sm md:text-lg text-[#575353] my-3">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, consectetur aspernatur. Dolorem suscipit minus, eos explicabo sapiente ipsam saepe illum ipsum repellendus totam error neque distinctio, itaque asperiores sit architecto nulla, iusto iste? Voluptatem excepturi voluptate harum repudiandae amet necessitatibus sunt, ex ad saepe dolor, molestiae sint nihil officia odio.
         </div>
         <button class="bg-[#c8222c] px-4 p-2 rounded-full text-white">
           Read More
@@ -243,229 +247,211 @@
     </section>
 
     <section class="my-10" id="feature-house">
-      <div class="flex justify-between px-20">
-        <h3 class="font-extrabold font-Playfair text-[29px] text-[#c8222c]">Featured Houses</h3>
+      <div class="flex flex-col justify-center md:flex-row md:justify-between px-6 md:px-20">
+        <h3 class="font-extrabold font-Playfair text-lg md:text-2xl text-[#c8222c] mb-4 md:mb-0">Featured Houses</h3>
         <div class="flex gap-4 items-center">
-          <button>Previous</button>
-          /
-          <button>Next</button>
+          <button class="hidden md:block">Previous</button>
+          <span class="hidden md:block">/</span>
+          <button class="hidden md:block">Next</button>
         </div>
       </div>
 
-      <div id="feature-cards-wrapper" class="px-20 grid grid-cols-4 my-6 gap-20">
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/house1.png"></div>
+      <div id="feature-cards-wrapper" class="px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 my-6 gap-8 md:gap-20">
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/house2.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/house3.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/house4.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-      </div>
-      <div class="flex justify-center">
-        <button class="bg-[#c8222c] p-2 rounded-full px-10 flex">
-          <a href="#" class="text-[18px] text-white" >
-            View all featured houses
-          </a>
-        </button>
-      </div>
+        </div>
     </section>
 
     <section class="my-10" id="feature-land">
-      <div class="flex justify-between px-20">
-        <h3 class="font-extrabold font-Playfair text-[29px] text-[#c8222c]">Land for Sale</h3>
-        <div class="flex gap-4 items-center">
-          <button>Previous</button>
+      <div class="flex flex-col md:flex-row justify-between px-4 md:px-20">
+        <h3 class="font-extrabold font-Playfair text-2xl md:text-3xl text-[#c8222c]">Land for Sale</h3>
+        <div class="flex gap-4 items-center mt-4 md:mt-0">
+          <button class="hidden md:block">Previous</button>
           /
-          <button>Next</button>
+          <button class="hidden md:block">Next</button>
+          <button class="md:hidden">Prev/Next</button>
         </div>
       </div>
-
-      <div id="feature-cards-wrapper" class="px-20 grid grid-cols-4 mt-5 gap-20 my-6">
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land1.png"></div>
+      <div id="feature-cards-wrapper" class="px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 my-6 gap-8 md:gap-20">
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land2.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land3.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land4.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land5.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land6.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land7.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/land8.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
       </div>
-
       <div class="flex justify-center">
         <button class="bg-[#c8222c] p-2 rounded-full px-10 flex">
           <a href="#" class="text-[18px] text-white" >
@@ -473,134 +459,118 @@
           </a>
         </button>
       </div>
-
     </section>
 
-    <section class="my-10" id="feature-apartment">
-      <div class="flex justify-between px-20">
-        <h3 class="font-extrabold font-Playfair text-[29px] text-[#c8222c]">Featured apartments</h3>
+    <section class="my-10 px-4 md:px-0" id="feature-apartment">
+      <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-20">
+        <h3 class="font-extrabold font-Playfair text-2xl md:text-3xl text-[#c8222c] mb-6 md:mb-0">Featured apartments</h3>
         <div class="flex gap-4 items-center ">
-          <button>Previous</button>
+          <button class="px-2 py-1 rounded-md bg-gray-100 text-gray-500 hover:text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400">Previous</button>
           /
-          <button>Next</button>
+          <button class="px-2 py-1 rounded-md bg-gray-100 text-gray-500 hover:text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-400">Next</button>
         </div>
       </div>
 
-      <div id="feature-cards-wrapper" class="px-20 grid grid-cols-4 my-6 gap-20">
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/apart1.png"></div>
+      <div id="feature-cards-wrapper" class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 py-6 md:py-12 px-4 md:px-20">
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/apart2.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/apart3.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-green-500 text-[16px] flex px-4 rounded-full items-center text-white">Sale</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-
-        <div class="max-w-[280px]">
-          <div><img src=".//photosrc/apart4.png"></div>
+        <div class="max-w-[280px] mx-auto md:mx-0">
+          <div><img src=".//photosrc/apart1.png" class="w-full h-auto object-cover"></div>
           <div class="flex justify-between mt-2">
-            <span class="font-bold text-[20px]">Rs 3,20,000</span>
-            <div class="bg-blue-600 text-[16px] flex px-4 rounded-full items-center text-white">Rent</div>
+            <span class="font-bold text-lg md:text-xl">Rs 3,20,000</span>
+            <div class="bg-green-500 text-sm md:text-base flex px-3 py-1 rounded-full items-center text-white">Sale</div>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             <span>8 Aana</span>
             |
             <span>10ft.Road</span>
           </div>
-          <div class="text-[#575353] font-bold">
+          <div class="text-gray-500 font-bold text-sm md:text-base">
             Bhaisepathi Kathmandu
           </div>
         </div>
-      </div>
-      <div class="flex justify-center">
-        <button class="bg-[#c8222c] p-2 rounded-full px-10 flex">
-          <a href="#" class="text-[18px] text-white" >
-            View all featured apartments
-          </a>
-        </button>
       </div>
     </section>
 
-    <section class="px-20">
+    <section class="px-4 md:px-20">
       <h3 class="text-[#c8222c] font-Playfair text-[29px] font-bold">Our Agents</h3>
-      <p class="text-[16px] max-w-[60%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum deserunt tenetur quasi. Totam, eius voluptates. Ullam quidem consequatur officia unde.
-      </p>
-      <div id="card-agent-wrapper" class="grid grid-cols-3 gap-y-4 my-4 gap-x-20">
+      <p class="text-[16px] max-w-[100%] sm:max-w-[80%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum deserunt tenetur quasi. Totam, eius voluptates. Ullam quidem consequatur officia unde.</p>
+      <div id="card-agent-wrapper" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 my-4 sm:gap-x-4 md:gap-x-20">
         <div>
-          <img src="./photosrc/agent.png">
+          <img src="./photosrc/agent.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
         <div >
-          <img src="./photosrc/agent1.png">
+          <img src="./photosrc/agent1.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
         <div >
-          <img src="./photosrc/agent2.png">
+          <img src="./photosrc/agent2.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
         <div >
-          <img src="./photosrc/agent3.png">
+          <img src="./photosrc/agent3.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
         <div >
-          <img src="./photosrc/agent4.png">
+          <img src="./photosrc/agent4.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
         <div >
-          <img src="./photosrc/agent5.png">
+          <img src="./photosrc/agent5.png" class="w-full">
           <h3 class="font-Playfair my-2 font-bold text-[29px]">Jessica Raul</h3>
           <p class="font-[16px]">Real state Agent</p>
         </div>
       </div>
     </section>
-
-    <section>
-
-
 
 
 <section class="bg-white">
@@ -700,158 +670,162 @@
   </div>
 </section>
 
-<section class="flex flex-col  px-20">
-  <h2 class="text-[#c8222c] text-[29px] font-Playfair font-bold text-center">
+<section class="flex flex-col px-8 md:px-20 lg:px-32 xl:px-40">
+  <h2 class="text-[#c8222c] text-3xl md:text-4xl font-Playfair font-bold text-center mb-8 md:mb-10">
     News & Events
   </h2>
-  <div id="news-card-wrapper" class="grid grid-cols-3 gap-20 mt-10">
-    <div id="news-card">
-      <img src="./photosrc/news1.png">
-      <h3 class="font-Playfair font-semibold my-1">20+ Real properties for Realters</h3>
-      <div class="flex gap-4 text-[16px]">
+  <div id="news-card-wrapper" class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+    <div id="news-card" class="bg-white shadow-md">
+      <img src="./photosrc/news1.png" class="w-full">
+      <h3 class="font-Playfair font-semibold text-2xl md:text-3xl my-3 px-4">20+ Real properties for Realters</h3>
+      <div class="flex gap-4 text-lg md:text-xl px-4">
         <span>Ham Brook</span>
-        <span> Jan-2-2023</span>
-        <span class="text-[#c8222c] text-[16px]">News</span>
+        <span>Jan 2, 2023</span>
+        <span class="text-[#c8222c]">News</span>
       </div>
     </div>
-    <div id="news-card">
-      <img src="./photosrc/news2.png">
-      <h3 class="font-Playfair font-semibold my-1">20+ Real properties for Realters</h3>
-      <div class="flex gap-4 text-[16px]">
+    <div id="news-card" class="bg-white shadow-md">
+      <img src="./photosrc/news2.png" class="w-full">
+      <h3 class="font-Playfair font-semibold text-2xl md:text-3xl my-3 px-4">20+ Real properties for Realters</h3>
+      <div class="flex gap-4 text-lg md:text-xl px-4">
         <span>Ham Brook</span>
-        <span> Jan-2-2023</span>
-        <span class="text-[#c8222c] text-[16px]">News</span>
+        <span>Jan 2, 2023</span>
+        <span class="text-[#c8222c]">News</span>
       </div>
     </div>
-    <div id="news-card">
-      <img src="./photosrc/news3.png">
-      <h3 class="font-Playfair font-semibold my-1">20+ Real properties for Realters</h3>
-      <div class="flex gap-4 text-[16px]">
+    <div id="news-card" class="bg-white shadow-md">
+      <img src="./photosrc/news3.png" class="w-full">
+      <h3 class="font-Playfair font-semibold text-2xl md:text-3xl my-3 px-4">20+ Real properties for Realters</h3>
+      <div class="flex gap-4 text-lg md:text-xl px-4">
         <span>Ham Brook</span>
-        <span> Jan-2-2023</span>
-        <span class="text-[#c8222c] text-[16px]">News</span>
+        <span>Jan 2, 2023</span>
+        <span class="text-[#c8222c]">News</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="pt-10 pb-5 px-20 my-20 bg-[#F4F0F0]">
-  <h2 class="text-[#c8222c] font-Playfair text-[29px] text-center">Contact Us</h2>
-  <div class="flex my-10 gap-[100px]">
-    <form class="p-2 bg-white rounded-sm max-w-[70%]  pr-40">
-      <h2 class="font-bold font-Playfair text-[18px]">Contact Form</h2>
-      <div class="flex gap-4 my-4">
-        <div class="flex flex-col">
+
+
+<section class="pt-10 pb-5 px-4 sm:px-20 my-10 sm:my-20 bg-gray-100">
+  <h2 class="text-[#c8222c] font-Playfair text-2xl sm:text-3xl text-center">Contact Us</h2>
+  <div class="flex flex-col sm:flex-row my-10 gap-8 sm:gap-24">
+    <form class="p-2 bg-white rounded-sm w-full sm:max-w-[70%] pr-8">
+      <h2 class="font-bold font-Playfair text-base sm:text-lg mb-4">Contact Form</h2>
+      <div class="flex flex-col sm:flex-row gap-4 mb-4">
+        <div class="flex flex-col w-full sm:w-1/2">
           <label for="f-name">First Name</label>
-          <input type="text" name="f-name" placeholder="Enter your first name" class="border-[1px] border-gray-600 rounded-full px-4 p-2">
+          <input type="text" name="f-name" placeholder="Enter your first name" class="border-[1px] border-gray-600 rounded-full px-4 py-2">
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col w-full sm:w-1/2">
           <label for="l-name">Last Name</label>
-          <input type="text" name="l-name" placeholder="Enter your last name" class="border-[1px] border-gray-600 rounded-full px-4 p-2">
+          <input type="text" name="l-name" placeholder="Enter your last name" class="border-[1px] border-gray-600 rounded-full px-4 py-2">
         </div>
       </div>
-      <div class="flex flex-col my-4">
+      <div class="flex flex-col mb-4">
         <label for="email">Email</label>
-        <input type="text" placeholder="Enter your email" class="border-[1px] border-gray-600 rounded-full px-4 p-2">
+        <input type="text" placeholder="Enter your email" class="border-[1px] border-gray-600 rounded-full px-4 py-2">
       </div>
-      <div class="flex flex-col my-4">
-        <label for="email">Subject</label>
-        <input type="text" placeholder="Enter your subject" class="border-[1px] border-gray-600 rounded-full px-4 p-2">
+      <div class="flex flex-col mb-4">
+        <label for="subject">Subject</label>
+        <input type="text" placeholder="Enter your subject" class="border-[1px] border-gray-600 rounded-full px-4 py-2">
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col mb-4">
         <label for="msg">Message</label>
-        <textarea placeholder="Write your message here" name="msg" id="" cols="30" rows="10" class="border-[1px] border-gray-600 rounded-md px-4 p-2"></textarea>
+        <textarea placeholder="Write your message here" name="msg" id="" cols="30" rows="10" class="border-[1px] border-gray-600 rounded-md px-4 py-2"></textarea>
       </div>
     </form>
 
-    <div class="bg-white rounded-md p-2 pb-10 pr-40 h-fit">
+    <div class="bg-white rounded-md p-2 pb-10 pr-8 flex-1">
       <div>
-        <div class="text-[#575353]">
-          <i class="fa-solid fa-location-dot mx-1"></i>Address
+        <div class="text-gray-600 flex items-center mb-2">
+          <i class="fa-solid fa-location-dot mr-2"></i>
+          Address
         </div>
         <div class="text-[#c8222c]">Nepalgunj-Banke-Nepal</div>
       </div>
 
       <div class="my-4">
-        <div class="text-[#575353]">
-          <i class="fa-solid fa-phone mx-1"></i>Phone
+        <div class="text-gray-600 flex items-center mb-2">
+          <i class="fa-solid fa-phone mr-2"></i>
+          Phone
         </div>
         <div class="text-[#c8222c]">+081533073</div>
       </div>
 
       <div>
-        <div class="text-[#575353]">
-          <i class="fa-solid fa-envelope mx-1"></i>Email
+        <div class="text-gray-600 flex items-center mb-2">
+          <i class="fa-solid fa-envelope mr-2"></i>
+          Email
         </div>
         <div class="text-[#c8222c]">NepalgunjRealstate@gmail,com</div>
       </div>
     </div>
-  </div>
+    </div>
 </section>
 
-    <footer class="bg-[#1E1E1E] px-12 pt-20 pb-5 flex flex-col">
-      <div class="footer-container text-white flex gap-16 justify-center">
-        <div class="footer-row1 max-w-sm">
-          <div class="border-b-2 border-red-600 w-fit">
+
+    <footer class="bg-[#1E1E1E] px-4 md:px-12 pt-10 md:pt-20 pb-5 flex flex-col">
+      <div class="footer-container text-white flex flex-col md:flex-row gap-4 md:gap-16 justify-center">
+        <div class="footer-row1 max-w-sm text-center md:text-left">
+          <div class="border-b-2 border-red-600 w-fit mx-auto md:mx-0 mb-2 md:mb-4">
             <img src="./photosrc/Frame 55.png" class="h-14">
           </div>
           <div class="my-2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus doloribus voluptate iure.
           </div>
-          <div class="flex gap-2">
+          <div class="flex gap-2 justify-center md:justify-start">
             Follow :
             <div class="text-[#C8222C] text-lg flex gap-4">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-solid fa-envelope"></i>
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fas fa-envelope"></i>
             </div>
           </div>
         </div>
 
-        <div class="max-w-sm">
-          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px]">Quick Links</h3>
+        <div class="max-w-sm text-center md:text-left">
+          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px] mb-2 md:mb-4">Quick Links</h3>
           <ul class="flex flex-col my-2 gap-2">
-            <a href="#"> About</a>
-            <a href="#">Properties</a>
-            <a href="#">Services</a>
-            <a href="#">Testimonials</a>
+            <li><a href="#"> About</a></li>
+            <li><a href="#">Properties</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Testimonials</a></li>
           </ul>
         </div>
 
-        <div>
-          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px]">Contacts</h3>
+        <div class="max-w-sm text-center md:text-left">
+          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px] mb-2 md:mb-4">Contacts</h3>
           <ul class="my-2 flex flex-col gap-2">
-            <div>
-              <i class="fa-solid fa-location-dot text-[#C8222C]"></i> Nepalgunj,Banke-Nepal
-            </div>
-            <div>
-              <i class="fa-solid fa-phone text-[#C8222C]"></i> +081533073
-            </div>
-            <div>
-              <i class="fa-solid fa-envelope text-[#C8222C]"></i>
+            <li>
+              <i class="fas fa-location-dot text-[#C8222C]"></i> Nepalgunj,Banke-Nepal
+            </li>
+            <li>
+              <i class="fas fa-phone text-[#C8222C]"></i> +081533073
+            </li>
+            <li>
+              <i class="fas fa-envelope text-[#C8222C]"></i>
               NepalgunjRealstate@gmail.com
-            </div>
+            </li>
           </ul>
         </div>
 
-        <div class="max-w-sm">
-          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px]"> Subscribe to Our Newsletter </h3>
+        <div class="max-w-sm text-center md:text-left">
+          <h3 class="border-b-2 border-red-600 font-Playfair font-bold w-fit text-[19px] mb-2 md:mb-4"> Subscribe to Our Newsletter </h3>
           <div class="my-2">
             Subscribe to our newsletter and get notified about our update via email
           </div>
-          <div class="border-2 w-fit rounded-full">
-            <input type="text" placeholder="Enter your email" class="border-none bg-transparent px-2 outline-none">
+          <div class="border-2 w-fit rounded-full flex items-center">
+            <input type="text" placeholder="Enter your email" class="border-none bg-transparent px-2 outline-none flex-1">
             <button class="bg-[#C8222C] p-1 rounded-r-full px-4">
               Send
             </button>
           </div>
         </div>
-
       </div>
       <div class="bg-red-500 h-[2px] mt-32"></div>
       <div class="text-center text-white mt-4">Copyright ©2022 All rights reserved </div>
     </footer>
-
     <script src="script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
